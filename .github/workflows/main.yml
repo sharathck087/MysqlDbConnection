@@ -27,3 +27,4 @@ jobs:
                sudo service mysql status
                mysql -e 'CREATE DATABASE ${{ env.DB_DATABASE }};' -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }}
                mysql -e 'show databases;' -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }}
+               mysql -e '-V;' -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }}
