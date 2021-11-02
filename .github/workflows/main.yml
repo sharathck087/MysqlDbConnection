@@ -26,3 +26,4 @@ jobs:
                sudo /etc/init.d/mysql start
                sudo service mysql status
                mysql -e 'CREATE DATABASE ${{ env.DB_DATABASE }};' -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }}
+               mysql -e 'show databases;'
